@@ -1,0 +1,29 @@
+server:  
+  port: ${PORT:0}
+  tomcat:
+    max-threads: 5
+spring:  
+  application:
+    name: sample-ms-et-customer
+  datasource:
+    maxActive: 2
+    url: jdbc:postgresql://localhost:30432/postgresdb
+    driver-class-name: org.postgresql.Driver
+    username: postgresadmin
+    password: admin123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update      
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:           
+      hibernate.event.merge.entity_copy_observer: allow
+      #hibernate.jdbc.time_zone: UTC      
+      javax.persistence.validation.mode: none
+      hibernate.globally_quoted_identifiers: true
+logging:
+  level:    
+    root: info
