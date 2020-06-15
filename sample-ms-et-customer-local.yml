@@ -7,8 +7,8 @@ spring:
     name: sample-ms-et-customer
   datasource:
     maxActive: 2
-    url: jdbc:hsqldb:mem:customersdb
-    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:customersdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
     username: SA
     password: 
   jpa:
