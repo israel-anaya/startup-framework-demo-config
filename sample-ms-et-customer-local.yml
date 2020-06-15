@@ -7,12 +7,12 @@ spring:
     name: sample-ms-et-customer
   datasource:
     maxActive: 2
-    url: jdbc:postgresql://localhost:30432/postgresdb
-    driver-class-name: org.postgresql.Driver
-    username: postgresadmin
-    password: admin123
+    url: jdbc:hsqldb:mem:customersdb
+    driver-class-name: org.hsqldb.jdbcDriver
+    username: SA
+    password: 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    database-platform: org.hibernate.dialect.HSQLDialect
     generate-ddl: true
     show-sql: true
     hibernate:
