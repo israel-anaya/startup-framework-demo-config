@@ -1,0 +1,10 @@
+server:  
+  port: ${PORT:0}
+  tomcat:
+    max-threads: 5
+spring:  
+  application:
+    name: sample-ms-ts-customer
+logging:
+  level:    
+    root: info
