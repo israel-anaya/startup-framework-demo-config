@@ -1,7 +1,8 @@
 server:  
   port: ${PORT:0}
   tomcat:
-    max-threads: 5
+    threads:
+      max: 5
 spring:  
   application:
     name: sample-ms-et-customer
