@@ -5,7 +5,7 @@ server:
       max: 5
 spring:  
   application:
-    name: sample-ms-mts-customer-identity
+    name: sample-ms-mt-customer-identity
 logging:
   level:    
     root: info
