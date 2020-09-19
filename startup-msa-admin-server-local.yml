@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8081}
+  tomcat:
+    threads:
+      max: 5
+spring:
+  application:
+    name: startup-msa-admin-server-${spring.profiles.active}
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+logging:
+  level:
+    org.springframework.http.server.reactive: INFO
+    org.springframework.web.reactive: INFO
+    org.springframework.boot.autoconfigure.web: INFO
