@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:0}
+  tomcat:
+    threads:
+      max: 5
+spring:
+  application:
+    name: startup-msa-authorization-server-${spring.profiles.active}
+  redis:
+    host: localhost
+    port: 6379
+logging:
+  level:
+    root: INFO
