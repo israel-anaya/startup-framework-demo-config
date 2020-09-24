@@ -13,6 +13,14 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 logging:
   level:
     org.springframework.cloud.gateway: INFO

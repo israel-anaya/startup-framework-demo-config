@@ -25,6 +25,14 @@ spring:
       #hibernate.jdbc.time_zone: UTC      
       javax.persistence.validation.mode: none
       hibernate.globally_quoted_identifiers: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 logging:
   level:    
     root: info
