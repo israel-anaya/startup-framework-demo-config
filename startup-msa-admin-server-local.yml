@@ -11,7 +11,7 @@ spring:
       client:
         simple:
           instances:
-            msa:
+            architecture:
               - uri: http://discovery-server:8761
                 metadata:
                   management.context-path: /actuator
