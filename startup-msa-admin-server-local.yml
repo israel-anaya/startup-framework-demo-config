@@ -7,18 +7,17 @@ spring:
   application:
     name: startup-msa-admin-server-${spring.profiles.active}
   cloud:
-    gateway:
-      discovery:
-        client:
-          simple:
-            instances:
-              test:
-                - uri: http://discovery-server:8761
-                  metadata:
-                    management.context-path: /actuator
-                - uri: http://config-server:8762
-                  metadata:
-                    management.context-path: /actuator
+    discovery:
+      client:
+        simple:
+          instances:
+            test:
+              - uri: http://discovery-server:8761
+                metadata:
+                  management.context-path: /actuator
+              - uri: http://config-server:8762
+                metadata:
+                  management.context-path: /actuator
 logging:
   level:
     org.springframework.http.server.reactive: INFO
