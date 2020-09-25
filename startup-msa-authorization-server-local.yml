@@ -6,6 +6,25 @@ server:
 spring:
   application:
     name: startup-msa-authorization-server-${spring.profiles.active}
+  datasource:
+    maxActive: 2
+    url: jdbc:hsqldb:mem:usersdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: SA
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    generate-ddl: true
+    show-sql: true # No show on production mode
+    hibernate:
+      ddl-auto: update      
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:           
+      hibernate.event.merge.entity_copy_observer: allow
+      #hibernate.jdbc.time_zone: UTC      
+      javax.persistence.validation.mode: none
+      hibernate.globally_quoted_identifiers: true
   redis:
     host: localhost
     port: 6379
