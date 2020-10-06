@@ -25,6 +25,9 @@ spring:
       #hibernate.jdbc.time_zone: UTC      
       javax.persistence.validation.mode: none
       hibernate.globally_quoted_identifiers: true
+  redis:
+    host: localhost
+    port: 6379
 management:
   endpoints:
     web:
