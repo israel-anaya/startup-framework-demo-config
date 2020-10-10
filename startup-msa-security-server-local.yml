@@ -25,6 +25,17 @@ spring:
       #hibernate.jdbc.time_zone: UTC      
       javax.persistence.validation.mode: none
       hibernate.globally_quoted_identifiers: true
+  security:
+    oauth2:
+      client:
+        provider:
+          startup:
+            token-uri: http://localhost:8085/oauth/token
+        registration:
+          startup:
+            clientId: microservice
+            clientSecret: adminadmin
+            authorization-grant-type: client_credentials 
 management:
   endpoints:
     web:
