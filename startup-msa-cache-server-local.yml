@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:0}
+  tomcat:
+    threads:
+      max: 5
+spring:
+  application:
+    name: startup-msa-cache-server-${spring.profiles.active}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+logging:
+  level:
+    root: INFO
