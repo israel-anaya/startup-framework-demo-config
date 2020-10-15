@@ -29,7 +29,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8085/auth/realms/Startupframework
+#          issuer-uri: http://localhost:8085/auth/realms/Startupframework
           jwk-set-uri: http://localhost:8085/auth/realms/Startupframework/protocol/openid-connect/certs
 management:
   endpoints:
