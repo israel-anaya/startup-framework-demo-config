@@ -8,14 +8,14 @@ spring:
     name: startup-msa-security-server-${spring.profiles.active}
   datasource:
     maxActive: 2
-    url: jdbc:postgresql://localhost:5432/postgres-msa-db
-    driver-class-name: org.postgresql.Driver
-    username: msa
-    password: msa
+    url: jdbc:hsqldb:mem:usersdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: SA
+    password: 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    database-platform: org.hibernate.dialect.HSQLDialect
     generate-ddl: true
-    show-sql: true # No show on production modedmin
+    show-sql: true
     hibernate:
       ddl-auto: update      
       naming:
