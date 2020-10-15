@@ -5,7 +5,7 @@ server:
       max: 5
 spring:
   application:
-    name: startup-msa-security-server-${spring.profiles.active}
+    name: startup-ms-et-user
   datasource:
     maxActive: 2
     url: jdbc:hsqldb:mem:usersdb;DB_CLOSE_DELAY=-1
