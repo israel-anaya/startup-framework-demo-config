@@ -27,15 +27,10 @@ spring:
       hibernate.globally_quoted_identifiers: true
   security:
     oauth2:
-      client:
-        provider:
-          startup:
-            token-uri: http://localhost:8085/oauth/token
-        registration:
-          startup:
-            clientId: microservice
-            clientSecret: adminadmin
-            authorization-grant-type: client_credentials 
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/auth/realms/Startupframework
+          jwk-set-uri: http://localhost:8085/auth/realms/Startupframework/protocol/openid-connect/certs
 management:
   endpoints:
     web:
