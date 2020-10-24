@@ -6,6 +6,11 @@ server:
 spring:  
   application:
     name: sample-ms-ts-customer
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8085/auth/realms/startupframework/protocol/openid-connect/certs
 management:
   endpoints:
     web:
