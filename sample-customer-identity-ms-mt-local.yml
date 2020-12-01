@@ -5,7 +5,7 @@ server:
       max: 5
 spring:  
   application:
-    name: sample-ms-mt-customer-identity
+    name: sample-customer-identity-ms-mt
   security:
     oauth2:
       resourceserver:
