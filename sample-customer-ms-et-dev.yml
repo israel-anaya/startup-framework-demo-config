@@ -1,0 +1,40 @@
+server:  
+  port: ${PORT:0}  
+spring:  
+  application:
+    name: sample-customer-ms-et
+  datasource:
+    maxActive: 2
+    url: jdbc:hsqldb:mem:customersdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: SA
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update      
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:           
+      hibernate.event.merge.entity_copy_observer: allow
+      #hibernate.jdbc.time_zone: UTC      
+      javax.persistence.validation.mode: none
+      hibernate.globally_quoted_identifiers: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8085/auth/realms/startupframework/protocol/openid-connect/certs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+logging:
+  level:    
+    root: info
