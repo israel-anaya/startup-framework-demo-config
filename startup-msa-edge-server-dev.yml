@@ -1,5 +1,3 @@
-server:
-  port: ${PORT:8080}
 spring:
   application:
     name: startup-msa-edge-server-${spring.profiles.active}

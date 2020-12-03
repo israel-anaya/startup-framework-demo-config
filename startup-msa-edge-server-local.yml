@@ -1,8 +1,5 @@
 server:
   port: ${PORT:8080}
-  tomcat:
-    threads:
-      max: 5
 spring:
   application:
     name: startup-msa-edge-server-${spring.profiles.active}
