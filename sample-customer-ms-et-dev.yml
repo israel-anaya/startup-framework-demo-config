@@ -26,7 +26,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8085/auth/realms/startupframework/protocol/openid-connect/certs
+          jwk-set-uri: http://startup-msa-authorization-server/auth/realms/startupframework/protocol/openid-connect/certs
 management:
   endpoints:
     web:
