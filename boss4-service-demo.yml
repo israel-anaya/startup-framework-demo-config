@@ -1,3 +1,2 @@
-spring:
-  application:
-    name: servicio-demo-${spring.profile.active}
+server:
+  port: 9091
